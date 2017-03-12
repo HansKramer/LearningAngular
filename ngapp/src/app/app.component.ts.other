@@ -1,0 +1,23 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template: `
+     <h1>what {{ title }}</h1>
+     <input type="button" value="Click me" (click)="clicked()">
+     Holy crap
+     <b>yeah</b>
+
+     <ul *ngIf="visible">
+        <li> Item 1
+        <li> Item 2
+     </ul>
+     `
+})
+export class AppComponent {
+  visible = true;
+  title = 'app works!';
+  clicked() {
+      this.title = 'hello';
+  };
+}
